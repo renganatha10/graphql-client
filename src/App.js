@@ -8,23 +8,24 @@ import Home from './Pages/Home';
 
 const client = new ApolloClient({
   uri: `http://localhost:5000/graphql`,
+  
   onError: err => {
     console.log(err);
   },
 });
 
-client
-  .query({
-    query: gql`
-      {
-        getAllUsers {
-          name
-          id
-        }
-      }
-    `,
-  })
-  .then(({ data }) => console.log({ data }));
+// client
+//   .query({
+//     query: gql`
+//       {
+//         getAllUsers {
+//           name
+//           id
+//         }
+//       }
+//     `,
+//   })
+//   .then(({ data }) => console.log({ data }));
 
 class App extends Component {
   render() {
